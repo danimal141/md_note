@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require lodash
 //= require backbone
+//= require md_note
 //= require_tree .
+
