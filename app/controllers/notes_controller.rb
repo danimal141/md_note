@@ -50,6 +50,12 @@ class NotesController < ApplicationController
     end
   end
 
+  def rendering
+    @note = Note.new do |n|
+      n.raw_body = params[:raw_body]
+    end
+  end
+
   private
   def set_note
     @note = Note.find(params[:id])

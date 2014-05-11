@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  resources :notes do
+    collection do
+      post :rendering
+    end
+  end
+
   root 'notes#index'
-  resources :notes
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
