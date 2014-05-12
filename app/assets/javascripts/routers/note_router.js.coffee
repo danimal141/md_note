@@ -1,7 +1,7 @@
 class MdNote.Routers.NoteRouter extends Backbone.Router
   routes:
     'notes/new': 'newNote'
-    'notes/id': 'showNote'
+    'notes/:id': 'showNote'
     'notes': 'indexNotes'
     '.*': 'indexNotes'
 
@@ -23,9 +23,10 @@ class MdNote.Routers.NoteRouter extends Backbone.Router
       @stopListening note
 
   showNote: (id) ->
-    @note = @notes.get id
+    @note = @notes.get(id)
+
     if @note
-      @__renderNoteView
+      @__renderNoteView()
     else
       @note = new MdNote.Models.Note id: id
       @note.fetch

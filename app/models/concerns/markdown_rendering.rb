@@ -6,7 +6,7 @@ module MarkdownRendering
   end
 
   def render_markdown
-    markdown_processor.render :raw_body
+    markdown_processor.render self.raw_body
   end
 
   private

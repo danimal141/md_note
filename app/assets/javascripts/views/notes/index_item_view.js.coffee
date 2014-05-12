@@ -22,7 +22,7 @@ class MdNote.Views.Notes.IndexItemView extends Backbone.View
 
   navigateToNote: (e) ->
     e.preventDefault()
-    Backbone.histroy.navigate("notes/#{@model.id}", true)
+    Backbone.history.navigate("notes/#{@model.id}", true)
 
   deleteNote: (e) ->
     e.preventDefault()
