@@ -15,7 +15,7 @@
 //= require lodash
 //= require backbone
 //= require backbone.stickit/backbone.stickit
-//= require notifyjs
+//= require notifyjs/notify-combined
 //= require handlebars
 //= require md_note
 //= require_tree ./templates
