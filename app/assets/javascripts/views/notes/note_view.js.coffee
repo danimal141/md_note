@@ -18,3 +18,22 @@ class MdNote.Views.Notes.NoteView extends Backbone.View
     @listenTo @model, 'error', _.bind(@_onModelErrored, @)
 
     @$el.html @template(@model.toJSON())
+    preview = new MdNote.Views.Notes.PreviewView(model: @model, el: @$('.preview-col'))
+    preview.render()
+    @stickit()
+    this
+
+  submit: (e) ->
+    e.preventDefault()
+    @trigger 'clickSubmit'
+
+  navigateToNoteIndex: (e) ->
+    e.preventDefault()
+    Backbone.history.navigate('notes', true)
+
+  _onModelSynced: ->
+    @$('.submit-note-form').notify('Success!', className: 'success', position: 'right')
+
+  _onModelErrored: ->
+    @$('.submit-note-form').notify('Error!', className: 'error', position: 'right')
+

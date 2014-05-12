@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require lodash
 //= require backbone
+//= require backbone.stickit/backbone.stickit
 //= require handlebars
 //= require md_note
 //= require_tree ./templates

@@ -6,4 +6,8 @@ html
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 body
-  = yield
+  header.navbar.navbar-inverse.navbar-fixed-top
+    div.container
+      a.navbar-brand href="#{root_path}" MdNote
+  div#main.container
+    = yield
