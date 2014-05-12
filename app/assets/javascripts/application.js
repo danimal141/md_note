@@ -15,6 +15,11 @@
 //= require turbolinks
 //= require lodash
 //= require backbone
+//= require handlebars
 //= require md_note
-//= require_tree .
+//= require_tree ./templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 

@@ -17,5 +17,3 @@ class MdNote.Models.Note extends Backbone.Model
        dataType: 'json'
     .done(data) =>
       @set('body', data.body)
-
-

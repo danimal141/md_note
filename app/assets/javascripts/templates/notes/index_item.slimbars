@@ -1,0 +1,6 @@
+h3
+  a.note-title href="{{url}}"
+    | {{title}}
+  a.delete-note.glyphicon.glyphicon-trash href='#'
+div.note-preview
+  | {{previewText}}

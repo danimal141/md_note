@@ -20,6 +20,7 @@ gem 'redcarpet'
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.stickit'
+gem 'rails-assets-notifyjs'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
