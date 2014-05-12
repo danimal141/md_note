@@ -6,11 +6,11 @@ class MdNote.Routers.NoteRouter extends Backbone.Router
     '.*': 'indexNotes'
 
   initialize: (options) ->
-    @layout = new MdNote.Views.LayoutView(el: $('body'))
+    @layout = new MdNote.Views.LayoutView el: $('body')
     @notes = new MdNote.Collections.Notes()
 
   indexNotes: ->
-    indexView = new MdNote.Views.Notes.IndexView(collection: @notes)
+    indexView = new MdNote.Views.Notes.IndexView collection: @notes
     @layout.setView indexView
 
     @notes.fetch reset: true

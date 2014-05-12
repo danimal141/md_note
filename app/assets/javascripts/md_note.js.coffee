@@ -9,7 +9,3 @@ window.MdNote =
 
 $(document).ready ->
   MdNote.initialize()
-
-$(document).on 'page:load', ->
-  Backbone.history.stop()
-  MdNote.initialize()

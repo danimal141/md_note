@@ -13,8 +13,8 @@ class MdNote.Views.Notes.IndexView extends Backbone.View
   render: ->
     @$el.html @template()
     @collection.each (note) =>
-      view = new MdNote.Views.Notes.IndexItemView(model: note)
-      @$('#notes').append(view.render().el)
+      view = new MdNote.Views.Notes.IndexItemView model: note
+      @$('#notes').append view.render().el
     this
 
   navigateToNewNote: ->
