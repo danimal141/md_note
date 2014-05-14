@@ -33,6 +33,9 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'rr'
   gem 'factory_girl_rails'
+  # spec execution
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'guard-rspec'
 end
