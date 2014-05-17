@@ -1,0 +1,1 @@
+#Rails.application.config.assets.precompile += %w( teaspoon.css teaspoon-jasmine.js support/bind-poly.js jquery.js jquery_ujs.js lodash/lodash.compat.js lodash.js backbone/backbone.js backbone.js backbone.stickit/backbone.stickit.js notifyjs/notify-combined.js handlebars.js spec_helper.js )

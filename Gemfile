@@ -31,7 +31,7 @@ group :development do
   gem 'spring'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
@@ -39,4 +39,8 @@ group :test do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'guard-rspec'
+
+  # js spec
+  gem 'teaspoon'
+  gem 'guard-teaspoon'
 end

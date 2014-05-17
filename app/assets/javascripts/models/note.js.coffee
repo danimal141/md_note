@@ -16,5 +16,4 @@ class MdNote.Models.Note extends Backbone.Model
        data: {raw_body: @get('raw_body')}
        dataType: 'json'
     .done (data) =>
-      console.log data
       @set('body', data.body)
