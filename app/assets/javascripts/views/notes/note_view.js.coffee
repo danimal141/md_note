@@ -29,7 +29,7 @@ class MdNote.Views.Notes.NoteView extends Backbone.View
 
   navigateToNoteIndex: (e) ->
     e.preventDefault()
-    Backbone.history.navigate('notes', true)
+    Backbone.history.navigate('/notes', true)
 
   _onModelSynced: ->
     @$('.submit-note-form').notify('Success!', className: 'success', position: 'right')

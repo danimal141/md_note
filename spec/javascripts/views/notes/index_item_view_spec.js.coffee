@@ -7,22 +7,22 @@ describe 'MdNote.Views.Notes.IndexItemView', ->
 
   describe 'render', ->
     it 'render li element for note object', ->
-      view = new MdNote.Views.Notes.IndexItemView(model: @note)
+      view = new MdNote.Views.Notes.IndexItemView model: @note
       view.render()
       expect(view.$el).toBeTruthy()
       expect(view.$el).toHaveId 'note-1'
       expect(view.$el.find('a')).toHaveClass 'note-title'
 
-      expect(view.$el.find('.note-title')).toContainText 'Note Title'
-      expect(view.$el.find('.note-preview')).toContainText 'body text'
+      expect(view.$('.note-title')).toContainText 'Note Title'
+      expect(view.$('.note-preview')).toContainText 'body text'
 
   describe 'click .note-title', ->
     it 'navigate to the note url', ->
       spy = spyOn(Backbone.history, 'navigate')
 
-      view = new MdNote.Views.Notes.IndexItemView(model: @note)
+      view = new MdNote.Views.Notes.IndexItemView model: @note
       view.render()
-      view.$el.find('.note-title').trigger 'click'
+      view.$('.note-title').trigger 'click'
       expect(spy).toHaveBeenCalledWith('/notes/1', true)
 
   describe 'click .delete-note', ->
@@ -31,7 +31,7 @@ describe 'MdNote.Views.Notes.IndexItemView', ->
       spyOn(window, 'confirm').andCallFake ->
         return true
 
-      view = new MdNote.Views.Notes.IndexItemView(model: @note)
+      view = new MdNote.Views.Notes.IndexItemView model: @note
       view.render()
-      view.$el.find('.delete-note').trigger 'click'
+      view.$('.delete-note').trigger 'click'
       expect(spy).toHaveBeenCalled()
