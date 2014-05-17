@@ -1,5 +1,4 @@
 // Teaspoon includes some support files, but you can use anything from your own support path too.
-// require support/jasmine-jquery
 // require support/sinon
 // require support/your-support-file
 //
@@ -27,5 +26,5 @@
 //
 // You can require javascript files here. A good place to start is by requiring your application.js.
 //= require application
-//= require jasmine-ajax/lib/mock-ajax.js
-
+//= require support/jasmine-jquery
+//= require jasmine-ajax/lib/mock-ajax
