@@ -43,4 +43,5 @@ group :development, :test do
   # js spec
   gem 'teaspoon'
   gem 'guard-teaspoon'
+  gem 'rails-assets-jasmine-ajax'
 end
